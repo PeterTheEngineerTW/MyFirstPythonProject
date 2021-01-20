@@ -41,6 +41,7 @@ Request Body
 }
 ```
 Response Code 201
+
 Response Body
 ```yaml
 {
@@ -55,6 +56,7 @@ Request Body
 None
 
 Response Code 200
+
 Response Body
 ```yaml
 {
@@ -74,7 +76,9 @@ Request Body
   'status': 1
 }
 ```
+
 Response Code 200
+
 Response Body
 ```yaml
 {
