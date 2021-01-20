@@ -11,21 +11,22 @@ RUN ln -sfn /usr/bin/python3.7 /usr/bin/python3 && ln -sfn /usr/bin/python3 /usr
 WORKDIR /app
 ADD . /app
 
+## Install curl for health check
+RUN apt-get install -y curl
+
+## Install sql client
+RUN apt-get install -y libmysqlclient-dev
+
 ## Install requirements
 RUN pip install -r requirements.txt
 
 ## Install uwsgi plugin
-RUN apt-get install -y uwsgi-plugins-all
-RUN apt-get install -y uwsgi-plugin-python3
-
-## Migration
-ENV FLASK_APP=app.py
-RUN flask db init
-# create diff
-RUN flask db migrate
-# create table
-RUN flask db upgrade
+#RUN apt-get install -y uwsgi-plugins-all
+RUN apt-get update && apt-get install -y uwsgi-plugin-python3
 
 EXPOSE 8080
 
-CMD ["uwsgi", "--ini", "/app/uwsgi.ini"]
+ADD ./startup.sh /app
+RUN chmod +x '/app/startup.sh'
+RUN chmod +x '/app/wait-for-it.sh'
+CMD /app/startup.sh

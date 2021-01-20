@@ -1,7 +1,7 @@
 import json
 import unittest
 from app import app
-from sqlalchemy import create_engine, MetaData, Table, Column, Integer, Boolean, Unicode
+from sqlalchemy import create_engine, MetaData, Table, Column, Integer, Boolean, Unicode, String
 
 
 class AppTest(unittest.TestCase):
@@ -14,7 +14,7 @@ class AppTest(unittest.TestCase):
         self.task = Table(
             'task', self.meta,
             Column('id', Integer, primary_key=True, autoincrement=True),
-            Column('name', Unicode(80), nullable=False),
+            Column('name', String, nullable=False),
             Column('status', Boolean, nullable=False),
         )
 

@@ -12,24 +12,4 @@ services:
       MYSQL_PASSWORD: 'password'
       MYSQL_ROOT_PASSWORD: 'example'
     ports:
-      - '3306:3306'
-
-  app:
-    build: .
-    container_name: app
-    expose:
-      - 8080
-    depends_on:
-      - mysql
-
-  nginx:
-    image: nginx:1.19.5
-    container_name: nginx
-    volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf
-    expose:
-      - 80
-    ports:
-      - '80:80'
-    depends_on:
-      - app
+      - "3306:3306"

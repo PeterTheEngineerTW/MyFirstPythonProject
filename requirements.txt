@@ -5,7 +5,7 @@ https://projects.unbit.it/downloads/uwsgi-lts.tar.gz
 # Lib
 Flask-SQLAlchemy==2.3.2
 jsonschema==2.6.0
-SQLAlchemy==1.2.14
+SQLAlchemy==1.3.22
 mysqlclient==2.0.3
 Flask-Migrate==2.5.3
 pytest==6.2.1
