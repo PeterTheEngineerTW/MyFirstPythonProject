@@ -23,6 +23,9 @@ $ docker-compose up
 ```
 
 ### Test
+Requirements:
+* python3.7
+* pytest
 
 Run unit test with coverage report on console
 
@@ -67,7 +70,7 @@ Response Body
 }
 ```
 
-#### <span style="color:blue">PUT</span> /task/<id>
+#### <span style="color:blue">PUT</span> /task/`<id>`
 Request Body
 ```yaml
 {
@@ -88,7 +91,7 @@ Response Body
 }
 ```
 
-#### <span style="color:blue">DELETE</span> /task/<id>
+#### <span style="color:blue">DELETE</span> /task/`<id>`
 Request Body
 None
 
