@@ -22,9 +22,9 @@ RUN apt-get install -y uwsgi-plugin-python3
 ENV FLASK_APP=app.py
 RUN flask db init
 # create diff
-RUN db migrate
+RUN flask db migrate
 # create table
-Flask db upgrade
+RUN flask db upgrade
 
 EXPOSE 8080
 
