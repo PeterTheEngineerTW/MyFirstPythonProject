@@ -36,7 +36,7 @@ $ pytest -p no:warnings --cov-report term-missing --cov=app ./tests/
 ```
 
 ### How to use
-#### <span style="color:blue">POST</span> /task
+#### <span style="color:blue">POST</span> `/task`
 Request Body
 ```yaml
 {
@@ -54,7 +54,7 @@ Response Body
 }
 ```
 
-#### <span style="color:blue">GET</span> /tasks
+#### <span style="color:blue">GET</span> `/tasks`
 Request Body
 None
 
@@ -70,7 +70,7 @@ Response Body
 }
 ```
 
-#### <span style="color:blue">PUT</span> /task/`<id>`
+#### <span style="color:blue">PUT</span> `/task/<id>`
 Request Body
 ```yaml
 {
@@ -91,7 +91,7 @@ Response Body
 }
 ```
 
-#### <span style="color:blue">DELETE</span> /task/`<id>`
+#### <span style="color:blue">DELETE</span> `/task/<id>`
 Request Body
 None
 
